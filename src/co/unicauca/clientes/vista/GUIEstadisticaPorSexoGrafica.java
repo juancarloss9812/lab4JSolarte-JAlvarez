@@ -20,7 +20,7 @@ public class GUIEstadisticaPorSexoGrafica extends javax.swing.JFrame implements 
     
     public GUIEstadisticaPorSexoGrafica(int h, int v) {
         initComponents();
-        setSize(400, 200);
+        setSize(300, 280);
         setLocation(h, v);
         setVisible(true);
     }
@@ -41,7 +41,8 @@ public class GUIEstadisticaPorSexoGrafica extends javax.swing.JFrame implements 
         bpMujeres = new javax.swing.JProgressBar();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        lblporcentaje = new javax.swing.JLabel();
+        lblporH = new javax.swing.JLabel();
+        lblporceMujer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(900, 420));
@@ -56,7 +57,9 @@ public class GUIEstadisticaPorSexoGrafica extends javax.swing.JFrame implements 
 
         jLabel2.setText("Mujeres");
 
-        lblporcentaje.setText(" ");
+        lblporH.setText("0%");
+
+        lblporceMujer.setText("0%");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,24 +68,24 @@ public class GUIEstadisticaPorSexoGrafica extends javax.swing.JFrame implements 
             .addGroup(layout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblporcentaje)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bpHombres, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bpMujeres, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(100, 100, 100))))
+                    .addComponent(bpHombres, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(lblporH))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(bpMujeres, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(lblporceMujer))
+                .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(7, 7, 7)
-                .addComponent(lblporcentaje)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblporH)
+                    .addComponent(lblporceMujer))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(bpHombres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -147,9 +150,8 @@ public class GUIEstadisticaPorSexoGrafica extends javax.swing.JFrame implements 
         total= totalHombres+totalMujeres;
         porcentajeHombre=(totalHombres*100)/total;
         porcentajeMujeres=(totalMujeres*100)/total;
-        System.out.println(total);
-        
-        System.out.println(porcentajeMujeres);
+        lblporH.setText(porcentajeHombre + " %");
+        lblporceMujer.setText(porcentajeMujeres + " %");
         bpHombres.setValue((int) porcentajeHombre);
         bpMujeres.setValue((int) porcentajeMujeres);
     }
@@ -159,6 +161,7 @@ public class GUIEstadisticaPorSexoGrafica extends javax.swing.JFrame implements 
     private javax.swing.JProgressBar bpMujeres;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel lblporcentaje;
+    private javax.swing.JLabel lblporH;
+    private javax.swing.JLabel lblporceMujer;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/libardo/Documentos/NetBeansProjects/Taller3-mvc-ClientesAgenciaViajes-Incompleto/src/co/unicauca/clientes/modelo/ClientesDB.java</file>
+            <file>file:/C:/Users/HP/Desktop/Taller3-mvc-ClientesAgenciaViajes-Incompleto/src/co/unicauca/clientes/vista/GUIEstadisticaPorSexo.java</file>
+            <file>file:/C:/Users/HP/Desktop/Taller3-mvc-ClientesAgenciaViajes-Incompleto/src/co/unicauca/clientes/modelo/ClientesDB.java</file>
+            <file>file:/C:/Users/HP/Desktop/Taller3-mvc-ClientesAgenciaViajes-Incompleto/src/co/unicauca/clientes/client/RunMVC.java</file>
+            <file>file:/C:/Users/HP/Desktop/Taller3-mvc-ClientesAgenciaViajes-Incompleto/src/co/unicauca/clientes/vista/GUIClientesProfesion.java</file>
+            <file>file:/C:/Users/HP/Desktop/Taller3-mvc-ClientesAgenciaViajes-Incompleto/test/co/unicauca/clientes/modelo/ClientesDBTest.java</file>
+            <file>file:/C:/Users/HP/Desktop/Taller3-mvc-ClientesAgenciaViajes-Incompleto/src/co/unicauca/clientes/vista/GUIBusquedaClientes.java</file>
+            <file>file:/C:/Users/HP/Desktop/Taller3-mvc-ClientesAgenciaViajes-Incompleto/src/co/unicauca/clientes/vista/GUIEstadisticaPorSexoGrafica.java</file>
         </group>
     </open-files>
 </project-private>
